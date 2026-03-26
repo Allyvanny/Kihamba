@@ -1,0 +1,15 @@
+<?php
+$con =mysqli_connect( 'sql109.infinityfree.com','if0_38810862','Alto2002','if0_38810862_alto');
+
+if(isset($_GET['id'])){
+	$delid = $_GET['id'];
+	$msg = mysqli_query($con,"DELETE FROM gallery WHERE id='$delid'");
+	if($msg>0){
+		header("refresh:1;url=viewproject.php");
+		//echo "successfully deleted......";
+	}
+	else{
+		echo"Failed to deleted";
+	}
+}
+?>

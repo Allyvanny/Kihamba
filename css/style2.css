@@ -1,0 +1,59 @@
+div{
+	background-color: whitesmoke;
+	text-align: center;-left: 20%;
+	margin-right: 10%;
+	margin-left: 10%;
+	border-radius: 30PX;
+	border-style: dashed;
+	border-color: red;
+	padding:1%;
+}
+	div h2{
+	color: brown;
+	font-size: 30px;
+}
+div img{
+	border-radius: 25px;
+	width: 100px;
+	border-style: dotted;
+	border-color: red;
+}
+label{
+	color: green;
+	font-size: 25px;
+}
+input{
+	width: 450px;
+	height: 20px;
+
+}
+table{
+	width: 100%;
+	text-align: left;
+	height: 25%;
+	border-collapse: collapse;
+}
+table td,th{
+	font-size: 25px;
+}
+button{
+	border-style: none;
+	color: blue;
+	background-color: greenyellow;
+	border-width:150px;
+	width: 150px;
+	font-size: 20px;
+	padding: 5px;
+}
+a{
+	padding: 25px;
+	text-decoration: none;
+	font-size: 25px;
+}
+a:hover{
+	color: red;
+}
+button a:hover{
+	color: brown;
+	background-color: blue;
+}

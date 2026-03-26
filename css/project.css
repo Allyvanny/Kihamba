@@ -1,0 +1,46 @@
+div{
+	background-color: teal;
+	text-align: center;-left: 20%;
+	margin-right: 20%;
+	margin-left: 30%;
+	border-radius: 30PX;
+	border-style: dashed;
+	border-color: red;
+	padding:1%;
+}
+.lab{
+	font-size: 30px;
+	color:black;
+}
+input{
+	width: 400px;
+	height: 50px;
+
+}
+h2{
+	color: white;
+
+}
+textarea{
+	width: 400px;
+}
+placeholder{
+	font-size: 30px;
+}
+a{
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+}
+button{
+	font-size: 20px;
+	background-color: green;
+	width: 200px;
+}
+button:hover{
+	background-color: yellow;
+	color: green;
+}
+a:hover{
+	color: red;
+}
