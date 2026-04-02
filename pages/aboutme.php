@@ -1,4 +1,7 @@
-
+<?php 
+  $path = "../"; // Go up one level to find the root
+  include 'header.php'; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,22 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../css/about.css">
 </head>
 <body>
-    <style>
-      
-        div{
-            background-color: #ccd4d4;
-        }
-        h1{
-            color: red;
-            border-left: 6px dotted red;
-            border-right: 6px dotted blue;
-            border-top: 6px dashed yellowgreen;
-            border-bottom:6px dashed brown;
-            text-align: center;
-        }
-    </style>
-    <h1> WELCOME TO YOU ALL .THIS IS MY SHORT DESCRIPTIONS AND HOBBY!!!!!!KEEP A LOOK.</h1>
-    <a href="../index.php">Go Back</a>
+    
     <div class="div">
         <h3>SHORT DESCRIPTION</h3>
         <img src="../images/my1.jpg" style="width:200px">
@@ -33,7 +21,7 @@ I take a degre of Computer Science for three years, Computer Science is the prog
 <p class="para">Am a Tanzanian, born in Kagera region,Karagwe distric, Igurwa ward, Bwera village at Omurutuntu Street.
     Am a fisrt born in my family of five children.My family mebers are;<br>
     <li><strong>Desdery Dioniz Kihamba:</strong> Father</li>
-    <li><strong>Theodatha Desdery Dionizi:</strong> Mather</li>
+    <li><strong>Theodatha Desdery Dionizi:</strong> Mother</li>
     <li><strong>Astery Desdery Dionizi:</strong> Second born</li>
     <li><Strong>Allen Desdery Dionizi:</Strong> Third born</li>
     <li><Strong>Adellin Desdery Dionizi: </Strong>Fourth born</li>

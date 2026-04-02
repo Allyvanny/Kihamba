@@ -1,6 +1,10 @@
 <?php 
+  $path = "../"; // Go up one level to find the root
+  include 'header.php'; 
+?>
+<?php 
 /*Creating data base connections*/
-$con =mysqli_connect( 'sql109.infinityfree.com','if0_38810862','Alto2002','if0_38810862_alto');
+$con =mysqli_connect( 'localhost','root','','alto');
 /*getting the id of viewing data from data base*/
 if (isset($_GET['viewid'])) {
 	$ona=$_GET['viewid'];
@@ -9,11 +13,11 @@ if (isset($_GET['viewid'])) {
 	$display='';
 	while ($query=mysqli_fetch_array($view)) {
 		$fname=$query['full_name'];
-		$regno=$query['regno'];
+		$username=$query['username'];
 		$phoneno=$query['phone_no'];
 		$display="
 <p><b><i>Full Name:</i></b>$fname</p>
-<p><b><i>Registration No:</i></b>$regno</p>
+<p><b><i>Username:</i></b>$username</p>
 <p><b><i>Phone No:</i></b>$phoneno</p>
 
 		";

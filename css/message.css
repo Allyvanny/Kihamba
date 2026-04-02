@@ -1,4 +1,4 @@
-body{
+/* body{
 	text-align: center;
 	
 	color: white;
@@ -48,4 +48,132 @@ a{
 }
 a :hover{
 	color:red;
+} */
+
+/* Modern Reset & Background */
+/* 1. Fix the Body conflict */
+body {
+    margin: 0;
+    padding: 0;
+    /* We remove display:flex from body so the header can stay at the top */
+    background: linear-gradient(135deg, #e0f2f1 0%, #ffffff 100%);
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+}
+
+/* 2. Adjust the Container */
+div {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    width: 90%;
+    max-width: 450px;
+    
+    /* This centers the box properly below the fixed header */
+    margin: 100px auto 50px auto; 
+    
+    color: #333; /* Ensures text is readable against white background */
+}
+
+/* 3. Fix the Heading size */
+h1 {
+    font-size: 22px; /* Reduced size so it doesn't look giant */
+    color: #2e7d32;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Form Layout */
+form {
+    text-align: left;
+}
+
+/* Labels */
+.lab {
+    font-size: 14px;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+/* Input, Select, and Textarea Styling */
+input, 
+select, 
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box; /* Fixes the width overlap issue */
+    transition: all 0.3s ease;
+}
+
+input:focus, 
+select:focus, 
+textarea:focus {
+    outline: none;
+    border-color: #2e7d32;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.1);
+}
+
+/* The Submit Button - "The Sweet Touch" */
+button {
+    width: 100%;
+    height: 50px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Back Link Styling */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2e7d32;
+}
+
+/* Success Message Styling (The $th variable) */
+i {
+    display: block;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-style: normal;
+    font-size: 14px;
+    border: 1px solid #c8e6c9;
 }

@@ -1,10 +1,13 @@
+<?php $root = isset($path) ? $path : ''; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Altokihamba | Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/style1.css"> -->
+     <link rel="stylesheet" type="text/css" href="<?php echo $root; ?>css/style1.css">
     <style>
         /* Ensuring the header fills the viewport width */
         body, html {
@@ -40,7 +43,7 @@
 
         .nav-container li a, .nav-container li span {
             display: block;
-            padding: 15px 20px;
+            padding: 15px 1px;
             color: white;
             text-decoration: none;
             font-weight: bold;
@@ -74,31 +77,35 @@
     <nav class="nav-container">
         <ul>
             <li>
-                <a href="index.php">Home Page</a>
+                <span>Home Page</span>
                 <ul>
-                    <li><a href="index.php">Home</a></li>
+                    <!-- <li><a href="index.php">Home</a></li> -->
+                     <li><a href="<?php echo $root; ?>index.php">Home</a></li>
                 </ul>
             </li>
             <li>
                 <span>About Me</span>
                 <ul>
-                    <li><a href="pages/aboutme.php">Developer</a></li>
+                    <!-- <li><a href="pages/aboutme.php">Developer</a></li> -->
+                     <li><a href="<?php echo $root; ?>pages/aboutme.php">Developer</a></li>
+
                 </ul>
             </li>
             <li>
                 <span>Tasks</span>
                 <ul>
-                    <li><a href="pages/Project.php">Add Upload</a></li>
-                    <li><a href="pages/Creat.php">Register</a></li>
-                    <li><a href="pages/login.php">Login</a></li>
+                    <!-- <li><a href="pages/Project.php">Add Upload</a></li> -->
+                     <li><a href="<?php echo $root; ?>pages/Project.php">Add Upload</a></li>
+                    <li><a href="<?php echo $root; ?>pages/Creat.php">Register</a></li>
+                    <li><a href="<?php echo $root; ?>pages/login.php">Login</a></li>
                 </ul>
             </li>
             <li>
                 <span>Contact</span>
                 <ul>
-                    <li><a href="pages/message.php">Contact Form</a></li>
+                    <li><a href="<?php echo $root; ?>pages/message.php">Contact Form</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
-    <div class="content-spacer"></div>
+    <!-- <div class="content-spacer"></div> -->

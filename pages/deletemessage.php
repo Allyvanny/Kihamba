@@ -1,6 +1,6 @@
 <?php 
 
-$con =mysqli_connect( 'sql109.infinityfree.com','if0_38810862','Alto2002','if0_38810862_alto');
+$con =mysqli_connect( 'localhost','root','','alto');
 if (isset($_GET['delid'])) {
 	$futa=$_GET['delid'];
 	$success=mysqli_query($con,"DELETE FROM messages WHERE id='$futa'");

@@ -1,38 +1,47 @@
 <?php 
-$con =mysqli_connect( 'sql109.infinityfree.com','if0_38810862','Alto2002','if0_38810862_alto');
+  $path = "../"; // Go up one level to find the root
+  include 'header.php'; 
+?>
+<?php 
+$con =mysqli_connect( 'localhost','root','','alto');
 $query=mysqli_query($con," SELECT * FROM attendance");
 $i = 1;
 $view='
-<table border="1em">
+<table class="styled-table">
+<thead>
 <tr>
 <th>Sno</th>
 <th>Full Name</th>
-<th>Registration Number</th>
+<th>Username</th>
 <th>Phone Number</th>
 <th> Action</th>
-</tr>';
+</tr>
+</thead>
+
+<tbody>';
 while ($show = mysqli_fetch_array($query)) {
 	$fid =$show['id'];
 	$fname =$show['full_name'];
-	$regno =$show['regno'];
+	$username =$show['username'];
 $phoneno =$show['phone_no'];
 
 $view .="
 <tr>
 <td>".$i++."</td>
 <td>$fname</td>
-<td>$regno</td>
+<td>$username</td>
 <td>$phoneno</td>
-<td>
+<td class='action'> 
 <a href='edit.php?editid=$fid'>Edit</a>
 <a href='view.php?viewid=$fid'>View</a>
-<a href='delete.php?delid=$fid'onclick='futa($fid)'>Delete</a>
+<a href='delete.php?delid=$fid'onclick='return confirm(\"Are you sure you want to delete this record?\")'>Delete</a>
 </td>
 </tr>
 ";
 }
+$view .='</tbody><table>';
  ?>
- <div>
+ <div class="container">
  	<link rel="stylesheet" type="text/css" href="../css/style2.css">
  	<h1>All Registered Members Information Records </h1>
  	<?php 
@@ -42,13 +51,11 @@ echo $view;
  </div>
   <script type="text/javascript">
    
-   function futa(){
-  var del= confirm(" Are you sure you want to delete?");
-  console.log(fid);
-  if (del){
-    alert("Successiful Deleted...");
-    window.location='?id='+fid;
-  }
- 
+  function futa(fid) {
+    var del = confirm("Are you sure you want to delete this record?");
+    if (del) {
+        // Redirecting to your delete logic page
+        window.location.href = 'delete.php?delid=' + fid;
+    }
 }
  </script>

@@ -1,5 +1,9 @@
 <?php 
-$con =mysqli_connect( 'sql109.infinityfree.com','if0_38810862','Alto2002','if0_38810862_alto');
+  $path = "../"; // Go up one level to find the root
+  include 'header.php'; 
+?>
+<?php 
+$con =mysqli_connect( 'localhost','root','','alto');
 $view='';
 $query=mysqli_query($con, "SELECT * FROM gallery ");
 while ($take=mysqli_fetch_array($query)) {
@@ -13,7 +17,7 @@ $view.="
 <p><strong>Description:</strong>$des</p>
 <p> 
 <a href='../pages/editproject.php?id=$uid'>Edit & Update</a>
-  <a href='deleteproject.php?id=$uid' onclick='futa($uid)'>Delete</a>
+  <a href='deleteproject.php?id=$uid' onclick='return confirm(\"Are you sure you want to delete this project?\")'>Delete</a>
   </p><hr>
 
 ";

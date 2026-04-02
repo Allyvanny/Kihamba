@@ -1,10 +1,13 @@
-
 <?php 
-$con =mysqli_connect( 'sql109.infinityfree.com','if0_38810862','Alto2002','if0_38810862_alto');
+  $path = "../"; // Go up one level to find the root
+  include 'header.php'; 
+?>
+<?php 
+$con =mysqli_connect( 'localhost','root','','alto');
 if (isset($_POST['submit'])) {
 	$name=$_POST['full_name'];
-	$phone=$_POST['phone'];
 	$prog=$_POST['programme'];
+	$phone=$_POST['phone'];
 	$mess=$_POST['message'];
 	$query=mysqli_query($con, " INSERT INTO messages VALUES('','$name','$prog','$phone','$mess')");
 	
@@ -31,7 +34,7 @@ if (isset($_POST['submit'])) {
 	<label class="lab" >Full Name</label><br>
 	<input type="text" name="full_name" placeholder="Enter yuor full name here" required   autocomplete="off"><br>a
 		<label class="lab">Programme</label><br>
- 	<select name="programme" style="width: 350px; height: 35px; font-size: 16px;">
+ 	<select name="programme" style="width: 350px; height: 45px; font-size: 16px;">
  		<option>....Select Programme....</option>
  		<option>Bachelor of Computer Science</option>
  		<option>Barchelor of Cpmputer Engineering</option>

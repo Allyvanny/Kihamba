@@ -1,5 +1,7 @@
- <footer style="bottom: 0; width: 100%; text-align: center; background-color: black; position: fixed; ">
-    <p style="color:white;font-size: 15px;">All right reserved @copy 2025. <i>Alto desdery Kiyamba</i></p>
+<footer style="width: 100%; text-align: center; background-color: #111; padding: 20px 0; margin-top: 40px; clear: both;">
+    <p style="color:white; font-size: 18px; margin: 0;">
+        All rights reserved &copy; 2025. Alto Desdery Kihamba
+    </p>
 </footer>
 </body>
-</htm>
+</html>

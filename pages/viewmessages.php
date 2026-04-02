@@ -1,17 +1,25 @@
 <?php 
+  $path = "../"; // Go up one level to find the root
+  include 'header.php'; 
+?>
+<?php 
 
-$con =mysqli_connect( 'sql109.infinityfree.com','if0_38810862','Alto2002','if0_38810862_alto');
+$con =mysqli_connect( 'localhost','root','','alto');
 $query=mysqli_query($con," SELECT * FROM messages");
 $i = 1;
 $view='
-<table border="1em">
+<table class="styled-table">
+<thead>
 <tr>
 <th>Sno</th>
 <th>Full Name</th>
 <th>Programme</th>
 <th>Message</th>
 <th> Action</th>
-</tr>';
+</tr>
+</thead>
+<tbody>
+';
 while ($show = mysqli_fetch_array($query)) {
 	$fid =$show['id'];
 	$fname =$show['full_name'];
@@ -24,10 +32,11 @@ $view .="
 <td>$fname</td>
 <td>$prog</td>
 <td>$mess</td>
-<td><a href='deletemessage.php?delid=$fid'onclick='futa($fid)'>Delete</a></td>
+<td><a href='deletemessage.php?delid=$fid'onclick='return confirm(\"Are you sure you want to delete this message?\")'>Delete</a></td>
 </tr>
 ";
 }
+$view .='</tbody><table>';
  ?>
  <div>
  	<link rel="stylesheet" type="text/css" href="../css/style2.css">

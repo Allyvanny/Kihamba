@@ -1,5 +1,5 @@
 <?php 
-$con =mysqli_connect( 'sql109.infinityfree.com','if0_38810862','Alto2002','if0_38810862_alto');
+$con =mysqli_connect( 'localhost','root','','alto');
 if (isset($_GET['readid'])) {
 	$takeid=$_GET['readid'];
 	$query=mysqli_query($con, " SELECT * FROM materials WHERE id= '$takeid'");

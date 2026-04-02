@@ -1,5 +1,9 @@
  <?php 
-$con =mysqli_connect( 'sql109.infinityfree.com','if0_38810862','Alto2002','if0_38810862_alto');
+  $path = "../"; // Go up one level to find the root
+  include 'header.php'; 
+?>
+ <?php 
+$con =mysqli_connect( 'localhost','root','','alto');
 
 if (isset($_POST['post'])) {
 	$head=$_POST['heading'];

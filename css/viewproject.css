@@ -2,7 +2,7 @@ div{
 	margin-left: 30%;
 	margin-right: 30%;
 	font-family: arial;
-	background-color: whitesmoke;
+	background-color:teal;
 }
 h2{
 	text-align: center;
@@ -13,10 +13,12 @@ h2{
 
 strong{
 	font-size: 20px;
-	color: rgba(218, 123, 123);
+	color: brown;
+	background-color: yellow;
 }
 a{
 	font-size: 20px;
 	text-decoration: none;
 	padding: 15px;
+	color: white;
 }
