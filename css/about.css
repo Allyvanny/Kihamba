@@ -57,13 +57,14 @@ margin-right: 10px;
 margin-left: 10px;
 }
 .image-i img{
-	width: 225px;
-	height: 260px;
+	width: 218px;
+	height: 255px;
 	display: block;
 	margin: 15px;
 }
 .caption{
 	margin-top: 10px;
+	margin-left: 6px;
 	font-size: 18px;
 	color: green;
 }
@@ -95,8 +96,12 @@ a {
 }
 .div{
 	background-color: lightgrey;
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 body{
 	background-color: lightblue;
+	margin-top: 20px;
 	
 }

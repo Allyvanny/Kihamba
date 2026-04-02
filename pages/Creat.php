@@ -1,6 +1,4 @@
 <?php 
-$path = "../"; 
-include 'header.php'; 
 $con = mysqli_connect('localhost', 'root', '', 'alto');
 
 if(isset($_POST['register'])){
@@ -29,23 +27,23 @@ if(isset($_POST['register'])){
 
 <div class="form-card">
 	<link rel="stylesheet" type="text/css" href="../css/style3.css">
-    <form action="" method="POST">
+    <form action="" method="POST" autocomplete="off">
         <h1>Register</h1>
         <div class="form-elements">
             <label>Full Name</label>
-            <input type="text" name="full_name" required placeholder="John Doe">
+            <input type="text" name="full_name" required placeholder="John Doe" autocomplete="off">
             
             <label>Username</label>
-            <input type="text" name="username" required placeholder="johndoe123">
+            <input type="text" name="username" required placeholder="johndoe123" autocomplete="none	">
             
             <label>Phone Number</label>
-            <input type="text" name="phone_no" required placeholder="07XXXXXXXX">
+            <input type="text" name="phone_no" required placeholder="07XXXXXXXX" autocomplete="off">
             
             <label>Password</label>
-            <input type="password" name="password" required>
+            <input type="password" name="password" required autocomplete="new-password">
             
             <label>Confirm Password</label>
-            <input type="password" name="password2" required>
+            <input type="password" name="password2" required autocomplete="new-password">
             
             <button name="register">Create Account</button>
         </div>

@@ -96,8 +96,8 @@
                 <ul>
                     <!-- <li><a href="pages/Project.php">Add Upload</a></li> -->
                      <li><a href="<?php echo $root; ?>pages/Project.php">Add Upload</a></li>
-                    <li><a href="<?php echo $root; ?>pages/Creat.php">Register</a></li>
-                    <li><a href="<?php echo $root; ?>pages/login.php">Login</a></li>
+                    <li><a href="<?php echo $root; ?>pages/users.php">Registered Members</a></li>
+                    <li><a href="<?php echo $root; ?>pages/logout.php">Logout</a></li>
                 </ul>
             </li>
             <li>

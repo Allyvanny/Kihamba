@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['user_id'])){
+    header("Location: login.php");
+    exit();
+}
+?>
 <?php 
   $path = "../"; // Go up one level to find the root
   include 'header.php'; 
@@ -47,7 +54,7 @@ $view .='</tbody><table>';
  	<?php 
 echo $view;
  	 ?>
- 	  <a href="Creat.php">Go back</a>
+ 	  <a href="../index.php">Go back</a>
  </div>
   <script type="text/javascript">
    
