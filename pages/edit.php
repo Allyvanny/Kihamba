@@ -10,7 +10,7 @@ if(isset($_GET['editid'])){
 	while ($fetched=mysqli_fetch_array($storesql)) {
 
 	$fname=$fetched['full_name'];
-	$regno=$fetched['username'];
+	$username=$fetched['username'];
 	$phoneno=$fetched['phone_no'];
 	}
 }
@@ -32,14 +32,14 @@ if (isset($_POST['Edit'])) {
  <!DOCTYPE html>
  <html>
  <head>
- 	<link rel="stylesheet" type="text/css" href="../css/style2.css">
+ 	<link rel="stylesheet" type="text/css" href="../css/style3.css">
  	<meta charset="utf-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1">
  	<title>Edit</title>
  	 <link rel="stylesheet" href="style1.css">
  </head>
  <body>
- <div>
+ <div class="form-card">
  	<form action="" method="POST" class="form">
  		<div class="form-elements">
 			<label>Full Name:</label><br>
@@ -51,12 +51,14 @@ if (isset($_POST['Edit'])) {
  		<button name="Edit">Edit</button>
  		<p style="color: green;font-size: 30px"><?php echo @$umefanikiwa; ?></p>
 		</div>
-		<a href="users.php">Go Back</a>
+		<div class="form-links">
+			<a href="users.php">Go Back</a>
+			</div>
  	</form>
  	
  </div>
 
-
  </body>
+ 
  </html>
  

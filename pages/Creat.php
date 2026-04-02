@@ -53,3 +53,4 @@ if(isset($_POST['register'])){
         </div>
     </form>
 </div>
+include 'footer.php'; ?>
