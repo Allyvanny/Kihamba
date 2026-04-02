@@ -16,7 +16,7 @@ if(isset($_POST['register'])){
             $check = mysqli_query($con, "INSERT INTO attendance (full_name, username, phone_no, password) VALUES ('$fullname', '$username', '$phoneno', '$pword')");
             if ($check) {
                 $msg = "<p style='color:green;'>Registered Successfully!</p>";
-                header("refresh:1;url=users.php");
+                header("refresh:0.5;url=users.php");
             }
         } else {
             $msg = "<p style='color:red;'>Passwords do not match!</p>";
