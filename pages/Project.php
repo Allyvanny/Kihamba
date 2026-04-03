@@ -14,7 +14,7 @@ if (isset($_POST['post'])) {
 
 	if ($succ> 0) {
 		echo "<p style='color:green; font-size:30px;'> Successifully Uploaded.....</p>";
-		header("refresh:1;url=viewproject.php");
+		header("refresh:1;url=Project.php");
 	}
 }
  ?>

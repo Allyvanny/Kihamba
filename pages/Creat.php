@@ -7,13 +7,17 @@ if(isset($_POST['register'])){
     $phoneno = mysqli_real_escape_string($con, $_POST['phone_no']);
     $pword = md5($_POST['password']);
     $pword2 = md5($_POST['password2']);
-    
+    // --- Image Upload Logic ---
+    $img_name = $_FILES['profile_pic']['name'];
+    // 
+    move_uploaded_file($_FILES['profile_pic']['tmp_name'] , "../store/".$img_name);
+
     $test = mysqli_query($con, "SELECT * FROM attendance WHERE username='$username'");
     if (mysqli_num_rows($test) > 0) {
         $msg = "<p style='color:red;'>User already exists!</p>";
     } else {
         if($pword == $pword2){
-            $check = mysqli_query($con, "INSERT INTO attendance (full_name, username, phone_no, password) VALUES ('$fullname', '$username', '$phoneno', '$pword')");
+            $check = mysqli_query($con, "INSERT INTO attendance (full_name, username, phone_no, password, profile_pic) VALUES ('$fullname', '$username', '$phoneno', '$pword', '$img_name')");
             if ($check) {
                 $msg = "<p style='color:green;'>Registered Successfully!</p>";
                 header("refresh:0.5;url=users.php");
@@ -27,7 +31,7 @@ if(isset($_POST['register'])){
 
 <div class="form-card">
 	<link rel="stylesheet" type="text/css" href="../css/style3.css">
-    <form action="" method="POST" autocomplete="off">
+    <form action="" method="POST" enctype="multipart/form-data" autocomplete="off">
         <h1>Register</h1>
         <div class="form-elements">
             <label>Full Name</label>
@@ -44,7 +48,10 @@ if(isset($_POST['register'])){
             
             <label>Confirm Password</label>
             <input type="password" name="password2" required autocomplete="new-password">
-            
+
+        <label>Profile Picture</label>
+        <input type="file" name="profile_pic" required>
+
             <button name="register">Create Account</button>
         </div>
         <div class="msg"><?php echo @$msg; ?></div>
@@ -53,4 +60,3 @@ if(isset($_POST['register'])){
         </div>
     </form>
 </div>
-include 'footer.php'; ?>

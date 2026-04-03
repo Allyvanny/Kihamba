@@ -6,7 +6,7 @@ if (isset($_GET['delid'])) {
 	$success=mysqli_query($con,"DELETE FROM messages WHERE id='$futa'");
 	if ($success>0) {
 		$futa= "<p style='color:green; font-size: 40px'>Successifull deleted....</p>";
-header("refresh:1;url=viewmessages.php");
+header("refresh:0.5;url=viewmessages.php");
 
 	}
 	else{

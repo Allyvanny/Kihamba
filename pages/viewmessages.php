@@ -38,7 +38,7 @@ $view .="
 }
 $view .='</tbody><table>';
  ?>
- <div>
+ <div class="mess">
  	<link rel="stylesheet" type="text/css" href="../css/style2.css">
  	<h1>All Messages sent from the people</h1>
  	<?php 

@@ -25,6 +25,7 @@ body{
 div{
     gap: 10px;
     line-height: 30px;
+    margin-top: 20px;
 }
 
 input{
@@ -100,7 +101,7 @@ h1 {
 }
 
 .styled-table thead tr {
-    background-color: #009879;
+    background-color: #045041;
     color: #ffffff;
     text-align: left;
     font-weight: bold;

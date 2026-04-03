@@ -48,3 +48,6 @@ $view.="
  
 }
  </script>
+  <?php
+   include 'footer.php'; 
+  ?>

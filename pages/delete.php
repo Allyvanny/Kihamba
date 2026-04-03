@@ -5,12 +5,12 @@ if (isset($_GET['delid'])) {
 	$success=mysqli_query($con,"DELETE FROM attendance WHERE id='$futa'");
 	if ($success>0) {
 		$futa= "<p style='color:green; font-size: 40px'>Successifull deleted....</p>";
-header("refresh:1;url=users.php");
+header("refresh:0.5;url=users.php");
 
 	}
 	else{
 		echo "failed to delete";
-		header("refresh:0.5;url=users.php");
+		header("refresh:0.7;url=users.php");
 	}
 }
  ?>

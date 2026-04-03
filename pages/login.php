@@ -12,7 +12,7 @@ if(isset($_POST['login'])){
         $row = mysqli_fetch_array($query);
         $_SESSION['user_id'] = $row['id']; // Save user info to session
         $_SESSION['username'] = $row['username'];
-        
+        $_SESSION['profile_pic'] = $row['profile_pic']; // Save profile picture filename to session
         header("Location: ../index.php");
         exit(); // Stop further script execution
     } else {

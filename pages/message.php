@@ -29,16 +29,16 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
 <div>
-		<h1>Hi, welocme to the communication page, please tell us your consern here please</h1>
+		<h1>Hi, welocme to the communication page, please tell me your consern please</h1>
 <form action="" method="POST">
 	<label class="lab" >Full Name</label><br>
-	<input type="text" name="full_name" placeholder="Enter yuor full name here" required   autocomplete="off"><br>a
+	<input type="text" name="full_name" placeholder="Enter yuor full name here" required   autocomplete="off"><br>
 		<label class="lab">Programme</label><br>
  	<select name="programme" style="width: 350px; height: 45px; font-size: 16px;">
  		<option>....Select Programme....</option>
  		<option>Bachelor of Computer Science</option>
  		<option>Barchelor of Cpmputer Engineering</option>
- 		<option>Barchelor of Agribusiness</option>
+ 		<option>Barchelor of Agribusiness Management with Technology</option>
  		<option>Barchelor of ICT</option>
  		<option>Barchelor of Data Science</option>
  		<option>Barchelor of Environmental Science</option>

@@ -6,8 +6,8 @@ if(!isset($_SESSION['user_id'])){
 }
 ?>
 <?php 
-  $path = "../"; // Go up one level to find the root
-  include 'header.php'; 
+//   $path = "../"; // Go up one level to find the root
+//   include 'header.php'; 
 ?>
 <?php 
 $con =mysqli_connect( 'localhost','root','','alto');
@@ -21,6 +21,7 @@ $view='
 <th>Full Name</th>
 <th>Username</th>
 <th>Phone Number</th>
+<th>Profile Picture</th>
 <th> Action</th>
 </tr>
 </thead>
@@ -31,13 +32,14 @@ while ($show = mysqli_fetch_array($query)) {
 	$fname =$show['full_name'];
 	$username =$show['username'];
 $phoneno =$show['phone_no'];
-
+$img = $show['profile_pic'];
 $view .="
 <tr>
 <td>".$i++."</td>
 <td>$fname</td>
 <td>$username</td>
 <td>$phoneno</td>
+<td><img src='../store/$img' style='width:50px; height:50px; border-radius:50%;'></td>
 <td class='action'> 
 <a href='edit.php?editid=$fid'>Edit</a>
 <a href='view.php?viewid=$fid'>View</a>
@@ -49,6 +51,17 @@ $view .="
 $view .='</tbody><table>';
  ?>
  <div class="container">
+   <div>
+     <h2 style="color: #2e7d32; text-align: left; padding-left: 20px;">
+        Hi, <?php echo $_SESSION['username']; ?>!
+    </h2>
+    <?php if(!empty($_SESSION['profile_pic'])): ?>
+            <img src="../store/<?php echo $_SESSION['profile_pic']; ?>" 
+                 style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid #009879; ">
+        <?php else: ?>
+            <img src="../store/profile.png" style="width: 60px; height: 60px; border-radius: 50%;">
+        <?php endif; ?>
+   </div>
  	<link rel="stylesheet" type="text/css" href="../css/style2.css">
  	<h1>All Registered Members Information Records </h1>
  	<?php 

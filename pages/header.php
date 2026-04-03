@@ -18,7 +18,8 @@
         }
 
         .nav-container {
-            background-color: green;
+            /* background-color: green; */
+              background-color: #045041;
             width: 100%;
             position: fixed; /* Keeps header at top */
             top: 0;
@@ -51,14 +52,16 @@
         }
 
         .nav-container li:hover {
-            background-color: darkgreen;
+            /* background-color: darkgreen; */
+            background-color: #045041;
+           
         }
 
         /* Dropdown styling */
         .nav-container ul li ul {
             display: none;
             position: absolute;
-            background-color: green;
+             background-color: #009879;
             min-width: 100%;
             flex-direction: column;
         }
