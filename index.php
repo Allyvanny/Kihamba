@@ -36,19 +36,19 @@ include 'pages/header.php'; ?>
 	<div class="title-group">
     <small>OFFICIAL UPDATES</small>
     <h2>Announcements</h2>
-    <div class="underline"></div>
+    <div class="underline"><a href="pages/announcements.php?category=announcement">View All</a></div>
 </div>
 
 <div class="title-group">
     <small>WHAT'S HAPPENING</small>
     <h2>Latest News</h2>
-    <div class="underline"></div>
+    <div class="underline"><a href="pages/news.php?category=news">View All</a></div>
 </div>
 
 <div class="title-group">
     <small>STAY AHEAD</small>
-    <h2>Upcoming News</h2>
-    <div class="underline"></div>
+    <h2>Upcoming Events</h2>
+    <div class="underline"><a href="pages/upcoming.php?category=event">View All</a></div>
 </div>
 </div>
 
